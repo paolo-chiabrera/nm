@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "commit": "git-cz",
+    "cz": "git-cz",
     "lint": "eslint --fix **/*.js",
     "precommit": "npm run lint",
     "prepush": "npm test",
@@ -20,6 +20,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
+    "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",

@@ -1,17 +1,13 @@
 language: node_js
 node_js:
-  - v6
-  - v8
-script:
-  - npm run lint
-  - npm run test
+- v6
+- v8
 deploy:
-  provider: script
-  script:
-    - npm run build
-    - git config --global user.name "TravisCI"
-    - git config --global user.email "commitizen@travis.ci"
-    - npm run semantic-release
+  provider: npm
+  email: paolo.chiabrera@gmail.com
+  api_key:
+    secure: lnxhfT8hyiE7OOj+saNEaYI7d9CrzGuYIOiM5Qqe2C8k8oNBRErsesPv9//2cYUMmVLL7001cuIKikGmLbnU8XcwSg4Q6q4gQmxWwDw6CkshqSRCatgtDHwhOGf8t6r7wNtcl7JBCD9wzxM2yOvlaFPLFiwpYm4mQzryPH3W0HfmSlMk+THpB2rF5Q0H/NOk1htqVV8pfN+TSFfCxspQCpECOj5QivtAtMG8KIqq2f44pay6YtvO9NcDQFyXG4ko0Azk+PKerYoYuq2xnz3bJc1aTf+hkE0oDgbP2CB4MdLS61EO+tpVrfGpfOIPNtzvoH8u4pR9QKJpZV1z6QFiv+ojM0+XprqRTHvrvQU3rnsVeyEDjB3HL099+FxJe/KMrJIsWvKJI3xiohYx/unfCoY1YWMp5Qwk8guOxHYuc6U0geQuXFpBlYA9Go1zzYlE1JbQKeiLC6IXlS4sgDD7nhmsibIw1+ZfB8QNWtu+FcXUb7d6qjDc/0XKc33NvAiX96u3JhAo/9FzczMahXaoFHfmlDZ0N36u8Mqu7uLgwGZHVBcCqIBo8nY3RqgVIYjNfzrW8URCIWXuxAqy8oIXUSh9s5Ni6z9QNP7oA3Zd4WPDQtMwRyYWliso+Pt8c6ZkaThOnJhlLlR0ShmY2N3CYeQVzdCAaFSOf2Xie2gTU9Y=
   on:
-    branch: master
+    tags: true
     node: v8
+    repo: paolo-chiabrera/nm-skeleton

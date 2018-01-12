@@ -1,6 +1,6 @@
 {
   "name": "nm-skeleton",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Node Module skeleton",
   "main": "lib/index.js",
   "repository": "https://github.com/paolo-chiabrera/nm-skeleton.git",
@@ -8,11 +8,9 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "cz": "git-cz",
     "lint": "eslint --fix **/*.js",
     "precommit": "npm run lint",
     "prepush": "npm test",
-    "semantic-release": "semantic-release",
     "test": "mocha"
   },
   "devDependencies": {
@@ -21,20 +19,12 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
-    "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
     "mocha": "^4.1.0",
-    "semantic-release": "^11.0.2",
     "sinon": "^4.1.4",
     "sinon-chai": "^2.14.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

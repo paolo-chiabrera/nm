@@ -6,4 +6,8 @@ export default class HelloWorld {
   get() {
     return `Hello World ${this.name}!`;
   }
+
+  set(name = '') {
+    this.name = name;
+  }
 }

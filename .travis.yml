@@ -9,6 +9,3 @@ script:
   - npm run test
 after_success:
   - npm run semantic-release
-env:
-  global:
-    - NPM_TOKEN: 89b19f78-8cd9-460b-bf59-d1e5bfa17d03

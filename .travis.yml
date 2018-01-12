@@ -2,21 +2,14 @@ language: node_js
 node_js:
   - v6
   - v8
-stages:
-  - lint
-  - test
-  - name: release
-    if: branch = master
-jobs:
-  include:
-    - stage: lint
-      script: 
-        - npm run lint
-    - stage: test
-      script: 
-        - npm run test
-    - stage: release
-      node_js: v8
-      script: 
-        - npm run build
-        - npm run semantic-release
+script:
+  - npm run lint
+  - npm run test
+deploy:
+  provider: script
+  script:
+    - npm run build
+    - npm run semantic-release
+  on:
+    tags: true
+    node: v8

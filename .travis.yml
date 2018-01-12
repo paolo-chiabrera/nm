@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - v6
   - v8
+before_install:
+  - git config --global user.name "TravisCI"
+  - git config --global user.email "commitizen@travis.ci"
 script:
   - npm run lint
   - npm run test

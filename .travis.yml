@@ -1,7 +1,10 @@
 language: node_js
+sudo: false
 node_js:
 - v6
 - v8
+after_success:
+  - npm run build
 deploy:
   provider: npm
   email: paolo.chiabrera@gmail.com
